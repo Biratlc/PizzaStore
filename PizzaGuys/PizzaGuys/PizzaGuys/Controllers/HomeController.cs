@@ -11,6 +11,8 @@ namespace PizzaGuys.Controllers
     public class HomeController : BaseController
     {
 
+        private int x = 8;
+
         private PizzaGuysContext _context;
         public HomeController(PizzaGuysContext context)
         {
@@ -82,6 +84,8 @@ namespace PizzaGuys.Controllers
             };
             _context.Order.Add(order);
 
+            SetOrder(order);
+
             var toppingInfo = new List<ToppingInfo>();
             for (int i = 2; i <= 4; i++)
             {
@@ -116,6 +120,54 @@ namespace PizzaGuys.Controllers
         public IActionResult MakeAPayment()
         {
             return View();
+        }
+
+        public IActionResult Paid()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Pay()
+        {
+            var cardType = new CardType
+            {
+                Type = "Card"
+            };
+            _context.CardType.Add(cardType);
+
+
+            var cardInfo = new CardInfo
+            {
+                CardNumber = 4060425,
+                CardTypeId = 1,
+                Ccv = 900
+
+            };
+            _context.CardInfo.Add(cardInfo);
+
+            var paymentOption = new PaymentOption
+            {
+                CardInfoId = cardInfo.Id,
+                Options = "Card"
+            };
+            _context.PaymentOption.Add(paymentOption);
+
+            var order = GetOrder().OrderId;
+            var payment = new Payment
+            {
+                CustomerId = GetLoggedInUser().CustomerId,
+                OrderId = 53,
+                PaymentOption = paymentOption.Id,
+                Status = "OK(400)"
+
+
+            };
+            x++;
+            _context.Payment.Add(payment);
+            _context.SaveChanges();
+
+
+            return RedirectToAction(nameof(Paid));
         }
     }
 }

@@ -33,10 +33,20 @@ namespace PizzaGuys.Helper
             return session.GetSession<Customer>("LoggedInUser");
         }
 
+        public static Order GetOrder(this ISession session)
+        {
+            return session.GetSession<Order>("LoggedInOrder");
+        }
+
 
         public static void SetLoggedInUser(this ISession session, Customer user)
         {
             session.SetSession("LoggedInUser", user);
+        }
+
+        public static void SetOrder(this ISession session, Order order)
+        {
+            session.SetSession("LoggedInOrder", order);
         }
 
     }

@@ -62,8 +62,11 @@ namespace PizzaGuys.Models
             {
                 entity.Property(e => e.Ccv).HasColumnName("ccv");
 
+                entity.Property(e => e.CardNumber)
+                    .HasMaxLength(50);
+
                 entity.HasOne(d => d.CardType)
-                    .WithMany(p => p.CardInfo)
+                    .WithMany()
                     .HasForeignKey(d => d.CardTypeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_CardInfo_CardType");

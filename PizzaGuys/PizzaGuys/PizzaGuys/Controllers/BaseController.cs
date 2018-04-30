@@ -16,9 +16,19 @@ namespace PizzaGuys.Controllers
             return HttpContext.Session.GetLoggedInUser();
         }
 
+        public Order GetOrder()
+        {
+            return HttpContext.Session.GetOrder();
+        }
+
         public void SetLoggedInUser(Customer user)
         {
             SetSession("LoggedInUser", user);
+        }
+
+        public void SetOrder(Order order)
+        {
+            SetSession("LoggedInOrder", order);
         }
 
         public void SetSession(string key, object o)

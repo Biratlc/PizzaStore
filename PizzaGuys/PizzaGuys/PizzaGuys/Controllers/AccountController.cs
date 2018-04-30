@@ -54,7 +54,7 @@ namespace PizzaGuys.Controllers
                 Address = address.AddressId,
                 Name = model.Name,
                 Email = model.Email,
-                Phone = "" + model.Phone
+                Phone = "9856875555"
             };
             _context.Customer.Add(customer);
 

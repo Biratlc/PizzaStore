@@ -13133,11 +13133,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\anis_\\Desktop\\PizzaGuys\\PizzaGuys\\PizzaGuys\\PizzaGuys.csproj",
+      "projectUniqueName": "C:\\Users\\anis_\\Desktop\\PizzaStore\\PizzaStore\\PizzaGuys\\PizzaGuys\\PizzaGuys\\PizzaGuys.csproj",
       "projectName": "PizzaGuys",
-      "projectPath": "C:\\Users\\anis_\\Desktop\\PizzaGuys\\PizzaGuys\\PizzaGuys\\PizzaGuys.csproj",
+      "projectPath": "C:\\Users\\anis_\\Desktop\\PizzaStore\\PizzaStore\\PizzaGuys\\PizzaGuys\\PizzaGuys\\PizzaGuys.csproj",
       "packagesPath": "C:\\Users\\anis_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\anis_\\Desktop\\PizzaGuys\\PizzaGuys\\PizzaGuys\\obj\\",
+      "outputPath": "C:\\Users\\anis_\\Desktop\\PizzaStore\\PizzaStore\\PizzaGuys\\PizzaGuys\\PizzaGuys\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",

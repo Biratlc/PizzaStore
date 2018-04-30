@@ -9,3 +9,14 @@ C:\Users\anis_\Desktop\PizzaGuys\PizzaGuys\PizzaGuys\obj\Debug\netcoreapp2.0\Piz
 C:\Users\anis_\Desktop\PizzaGuys\PizzaGuys\PizzaGuys\obj\Debug\netcoreapp2.0\PizzaGuys.AssemblyInfo.cs
 C:\Users\anis_\Desktop\PizzaGuys\PizzaGuys\PizzaGuys\obj\Debug\netcoreapp2.0\PizzaGuys.dll
 C:\Users\anis_\Desktop\PizzaGuys\PizzaGuys\PizzaGuys\obj\Debug\netcoreapp2.0\PizzaGuys.pdb
+C:\Users\anis_\Desktop\PizzaStore\PizzaStore\PizzaGuys\PizzaGuys\PizzaGuys\bin\Debug\netcoreapp2.0\PizzaGuys.deps.json
+C:\Users\anis_\Desktop\PizzaStore\PizzaStore\PizzaGuys\PizzaGuys\PizzaGuys\bin\Debug\netcoreapp2.0\PizzaGuys.runtimeconfig.json
+C:\Users\anis_\Desktop\PizzaStore\PizzaStore\PizzaGuys\PizzaGuys\PizzaGuys\bin\Debug\netcoreapp2.0\PizzaGuys.runtimeconfig.dev.json
+C:\Users\anis_\Desktop\PizzaStore\PizzaStore\PizzaGuys\PizzaGuys\PizzaGuys\bin\Debug\netcoreapp2.0\PizzaGuys.dll
+C:\Users\anis_\Desktop\PizzaStore\PizzaStore\PizzaGuys\PizzaGuys\PizzaGuys\bin\Debug\netcoreapp2.0\PizzaGuys.pdb
+C:\Users\anis_\Desktop\PizzaStore\PizzaStore\PizzaGuys\PizzaGuys\PizzaGuys\obj\Debug\netcoreapp2.0\PizzaGuys.csprojResolveAssemblyReference.cache
+C:\Users\anis_\Desktop\PizzaStore\PizzaStore\PizzaGuys\PizzaGuys\PizzaGuys\obj\Debug\netcoreapp2.0\PizzaGuys.csproj.CoreCompileInputs.cache
+C:\Users\anis_\Desktop\PizzaStore\PizzaStore\PizzaGuys\PizzaGuys\PizzaGuys\obj\Debug\netcoreapp2.0\PizzaGuys.AssemblyInfoInputs.cache
+C:\Users\anis_\Desktop\PizzaStore\PizzaStore\PizzaGuys\PizzaGuys\PizzaGuys\obj\Debug\netcoreapp2.0\PizzaGuys.AssemblyInfo.cs
+C:\Users\anis_\Desktop\PizzaStore\PizzaStore\PizzaGuys\PizzaGuys\PizzaGuys\obj\Debug\netcoreapp2.0\PizzaGuys.dll
+C:\Users\anis_\Desktop\PizzaStore\PizzaStore\PizzaGuys\PizzaGuys\PizzaGuys\obj\Debug\netcoreapp2.0\PizzaGuys.pdb

@@ -11,22 +11,40 @@
     <input id="cash" type="radio" name="method" value="Cash" />Cash on Delivery <br />
     <input id="card" type="radio" name="method" value="Card" />Debit/Credit Card<br />
 </div>
+<button id="confirmButton1" type="submit" class="btn btn-info hidden">Confirm</button>
+
 
 <!-- Change Icon Color -->
-<div id="cardInfo" style="margin-top: 50px" class="hidden">
-    <div class="card-js" data-capture-name="true" data-icon-colour="#158CBA"></div>
-</div>
+<form asp-controller="Home" asp-action="Pay" method="post">
+    <div id="cardInfo" style="margin-top: 50px" class="hidden">
+        <div class="card-js" data-capture-name="true" data-icon-colour="#158CBA">
+            <input class="card-number my-custom-class">
+            <input class="name" id="the-card-name-element">
+            <input class="expiry-month">
+            <input class="expiry-year">
+            <input class="cvc">
+        </div>
+    </div>
+
+    <button id="confirmButton2" type="submit" class="btn btn-info hidden">Confirm</button>
+</form>
 
 @section scripts{
     <script>
         $(document).ready(function () {
             $("#card").click(function () {
                 $("#cardInfo").removeClass("hidden");
+                $("#confirmButton2").removeClass("hidden");
+                $("#confirmButton1").addClass("hidden");
+
 
             });
 
             $("#cash").click(function () {
                 $("#cardInfo").addClass("hidden");
+                $("#confirmButton2").addClass("hidden");
+                $("#confirmButton1").removeClass("hidden");
+
 
             });
 

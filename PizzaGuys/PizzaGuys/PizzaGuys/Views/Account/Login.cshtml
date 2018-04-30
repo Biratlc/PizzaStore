@@ -9,7 +9,7 @@
 
     @*@await Html.PartialAsync("LeftBar")*@
 
-    <div class="col-md-6">
+    <div class="col-md-6" style="padding-bottom:25px">
         <h1 style="font-family: 'Century Gothic'">Login</h1>
         <form asp-action="Login">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -24,9 +24,15 @@
                 <input type="submit" value="LogIn" class="btn btn-success" />
             </div>
         </form>
+        <br />
+        <a asp-controller="Account" asp-action="Register">Register for free!</a>
+        <br />
+
 
         @*<a class="btn btn-link" asp-area="" asp-controller="Account" asp-action="ForgetPassword">Forget Password?</a>*@
     </div>
+
+    <img src="~/images/pizza5.jpg" />
 </div>
 
 @*@section scripts{
