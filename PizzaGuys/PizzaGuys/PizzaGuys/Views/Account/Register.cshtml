@@ -1,0 +1,70 @@
+﻿@model PizzaGuys.ViewModel.RegisterViewModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using (Html.BeginForm("Register", "Account"))
+{
+    <div class="form-group">
+        <label>Name: </label>
+        @Html.TextBoxFor(s => s.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.Name)
+    </div>
+    <div class="form-group">
+
+        <label>Email: </label>
+        @Html.TextBoxFor(s => s.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.Email)
+    </div>
+
+    <div class="form-group">
+
+        <label>Phone Number: </label>
+        @Html.TextBoxFor(s => s.Phone, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.Phone)
+    </div>
+
+    <div class="form-group">
+
+        <label>Address Line 1: </label>
+        @Html.TextBoxFor(s => s.AddressLine1, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.AddressLine1)
+    </div>
+
+    <div class="form-group">
+
+        <label>Address Line 1: </label>
+        @Html.TextBoxFor(s => s.AddressLine2, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.AddressLine2)
+    </div>
+
+    <div class="form-group">
+
+        <label>City: </label>
+        @Html.TextBoxFor(s => s.City, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.City)
+    </div>
+
+    <div class="form-group">
+
+        <label>State: </label>
+        @Html.TextBoxFor(s => s.State, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.State)
+    </div>
+
+    <div class="form-group">
+
+        <label>ZipCode: </label>
+        @Html.TextBoxFor(s => s.Zip, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.Zip)
+    </div>
+
+    <div class="form-group">
+
+        <button class="btn btn-success" value="Register" type="submit" />
+    </div>
+}
+

@@ -1,0 +1,81 @@
+﻿@model PizzaGuys.ViewModel.ToppingViewModel
+@{
+    ViewData["Title"] = "SizeAndToppingPicker";
+}
+
+<h2>Create Your Own Pizza</h2>
+
+<h4>Choose a size:</h4>
+<form>
+    <h5 id="maxWarn" class="hidden" style="color:red">* Maximum 3 toppings only</h5>
+    <input class="able" type="radio" name="Size" value="male"> Small - 10"<br>
+    <input class="able" type="radio" name="Size" value="female"> Medium - 12"<br>
+    <input class="able" type="radio" name="Size" value="other"> Large - 14"
+</form>
+<hr />
+<br />
+
+<button id="goToToppings" class="btn btn-info disabled">Toppings >>> </button>
+
+<div id="toppingDiv" class="hidden">
+    <h4>
+        Pick upto 3 toppings:
+    </h4>
+    <form id="general-content" asp-controller="Home" asp-action="SizeAndToppingPick" method="post">
+        @{
+            foreach (var topping in Model.Toppings)
+            {
+                <input class="messageCheckbox" type="checkbox" name="toppings" value="@topping">@topping<br />
+
+            }
+        }
+        <br />
+
+        <button id="goToPayment" class="btn btn-info">Payment >>> </button>
+    </form>
+
+
+
+</div>
+
+@section scripts{
+    <script>
+        debugger
+        $(document).ready(function () {
+
+            $(".able").click(function () {
+                $("#goToToppings").removeClass("disabled");
+
+            });
+
+            $("#goToToppings").click(function () {
+                $("#toppingDiv").removeClass("hidden");
+
+            });
+
+
+            var countChecked = function () {
+                var n = $("#general-content input:checked").length;
+                if (n > 3) {
+                    $("#goToPayment").addClass("disabled");
+                    $("#maxWarn").removeClass("hidden");
+                }
+                else {
+                    $("#goToPayment").removeClass("disabled");
+                    $("#maxWarn").addClass("hidden");
+
+                }
+            };
+            countChecked();
+
+            $("input[type=checkbox]").on("click", countChecked);
+
+        });
+
+
+
+
+    </script>
+}
+
+

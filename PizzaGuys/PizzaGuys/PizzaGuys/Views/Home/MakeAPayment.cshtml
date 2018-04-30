@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "MakeAPayment";
+}
+
+<h2>Make Your Payment</h2>
+
+<h5>How do you want to make your payment?</h5>
+
+<div>
+    <input id="cash" type="radio" name="method" value="Cash" />Cash on Delivery <br />
+    <input id="card" type="radio" name="method" value="Card" />Debit/Credit Card<br />
+</div>
+
+<!-- Change Icon Color -->
+<div id="cardInfo" style="margin-top: 50px" class="hidden">
+    <div class="card-js" data-capture-name="true" data-icon-colour="#158CBA"></div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#card").click(function () {
+                $("#cardInfo").removeClass("hidden");
+
+            });
+
+            $("#cash").click(function () {
+                $("#cardInfo").addClass("hidden");
+
+            });
+
+        })
+    </script>
+}
+
